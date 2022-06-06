@@ -1,3 +1,6 @@
 from os import remove
 file_path = '.\\file_writer.txt'
-remove(file_path)
+try:
+    remove(file_path)
+except FileNotFoundError:
+    print('File already deleted!')
